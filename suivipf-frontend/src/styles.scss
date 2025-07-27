@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Custom styles for Cameroonian Ministry of Finance theme */
+:root {
+  --primary-color: #1e3a8a; /* Blue for Ministry */
+  --secondary-color: #059669; /* Green for Cameroon */
+  --accent-color: #dc2626; /* Red for Cameroon */
+  --background-color: #f8fafc;
+  --text-color: #1f2937;
+}
+
+.ministry-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.intervention-card {
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.2s ease-in-out;
+}
+
+.intervention-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.status-pending { border-left-color: #f59e0b; }
+.status-in-progress { border-left-color: #3b82f6; }
+.status-completed { border-left-color: #10b981; }
+.status-validated { border-left-color: #059669; }
+.status-rejected { border-left-color: #ef4444; }
+
+.priority-low { background-color: #f0f9ff; }
+.priority-medium { background-color: #fefce8; }
+.priority-high { background-color: #fef2f2; }
+.priority-critical { background-color: #fdf2f8; }
